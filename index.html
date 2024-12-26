@@ -4,64 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculator</title>
+    <link href="https://fonts.cdnfonts.com/css/calculator" rel="stylesheet">
     <style>
+        @import url('https://fonts.cdnfonts.com/css/calculator');
+</style>
+
+    <style>
+        *
+        {
+            font-family: 'Calculator', sans-serif;
+        }
         .container
         {
             display: flex;
             justify-content: center;
             align-items: center;
             border: 2px solid black;
-            height: 500px;
+            height: 700px;
             width: 500px;
             position: relative;
             flex-wrap: wrap;
+            background-color: #3D3D5C;
+            border-radius:10px ;
         }
         .display 
         {
-           
-            height: 50px;
-            width: 450px;
-            margin-left: 25px;
-            margin-right: 25px;
+          
+            height: 100px;
+            width: 90%;
+            margin: auto;
             position: absolute;
             top: 10px;
+            border-radius:10px;
+            z-index: 1;
+            background-color: #A1Af77;
         }
         .display input 
         {
-            height: 50px;
-            width: 450px;
+            height: 100px;
+            width: 100%;
             border: 1px solid black;
+            z-index: 1;
+            border-radius:10px;
+            font-size: 80px;
+            background-color: #A1Af77;
         }
+        .display input::placeholder
+        {
+            font-size: 50px;
+        }
+        .buttons{
+            display: flex;
+            height: 78%;
+            width:90%;
+            flex-wrap:wrap;
+            justify-content: space-evenly;
+            position: absolute;
+            bottom: 0px;
+            z-index: 1 ;
+            border-radius:10px;
+            
+        }
+
+        .items {
+    display: flex; 
+    align-items:center; 
+    justify-content: center; 
+    height: 50px;
+    width: 60px;
+    border: 2px solid black;
+    margin: 15px;
+    border-radius: 5px; 
+    background-color: white; 
+    font-size: 16px; 
+    font-weight: bold;
+    font-size: 30px;
+}
+#equal
+{
+    background-color: #FF6348;
+    height: 70px;
+}
+
     </style>
 </head>
 <body>
     <div class="container">
         <div class="display">
             <form>
-                <input  type="text" id="display-no" name="display" placeholder="display">
+                <input  type="text" id="display-no" name="display" placeholder="0" dir="rtl">
             </form>
         </div>
-                <div class="items">1</div>
-                <div class="items">2</div>
-                <div class="items">3</div>
-                <div class="items">4</div>
-                <div class="items">5</div>
-                <div class="items">6</div>
-                <div class="items">7</div>
-                <div class="items">8</div>
+                <div class="buttons">
+                <div class="items">AC</div>
+                <div class="items">M+</div>
+                <div class="items">/</div>
+                <div class="items">X</div>
                 <div class="items">9</div>
-                <div class="items">10</div>
-                <div class="items">11</div>
-                <div class="items">12</div>
-                <div class="items">13</div>
-                <div class="items">14</div>
-                <div class="items">15</div>
-                <div class="items">16</div>
-                <div class="items">17</div>
-                <div class="items">18</div>
-                <div class="items">19</div>
-                <div class="items">20</div>
+                <div class="items">8</div>
+                <div class="items">7</div>
+                <div class="items">-</div>
+                <div class="items">6</div>
+                <div class="items">5</div>
+                <div class="items">4</div>
+                <div class="items">+</div>
+                <div class="items">3</div>
+                <div class="items">2</div>
+                <div class="items">1</div>
+                <div class="items"></div>
+                <div class="items">0</div>
+                <div class="items">.</div>
+                <div class="items">%</div>
+                <div class="items"id="equal">=</div>
         </div>
+                </div>
     </div>
 </body>
 </html>
